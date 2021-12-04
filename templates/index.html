@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="theme-color" content="#00000">
+    <title>Color change</title>
+  </head>
+  <body>
+    <h1> The color is changing. </h1>
+    <p> 
+      If you can't see it then you have to use Safari 15+, Chrome for Android 80+ w/o dark mode, or Samsung Internet 6.2+ <br> 
+    </p>
+    <script>
+      let scheme = document.querySelector('meta[name="theme-color"]')
+      let hue = 0
+
+      setInterval(() => {
+        scheme.setAttribute('content', `hsl(${hue+=5} 50% 30%)`)
+      }, 50)
+    </script>
+  </body>
+</html>
